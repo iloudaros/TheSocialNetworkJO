@@ -1,8 +1,9 @@
+#pragma once
 #include "FriendRequest.hpp"
 #include "Wall.hpp"
 #include <iostream>
 #include <vector>
-#pragma once
+
 using namespace std;
 
 

@@ -1,7 +1,7 @@
+#pragma once
 #include <iostream>
 #include "User.hpp"
 #include "Message.hpp"
-#pragma once
 
 using namespace std;
 
