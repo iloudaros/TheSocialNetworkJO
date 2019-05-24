@@ -1,5 +1,10 @@
-#include <stdio.h>
+#include <iostream>
+#include <string>
+#include <vector>
+#include "FriendRequest.hpp"
 //#pragma once
+
+using namespace std;
 
 
 class user {

@@ -2,6 +2,7 @@
 #include <string>
 #include <ctime>
 #pragma once
+
 using namespace std;
 
 class message
