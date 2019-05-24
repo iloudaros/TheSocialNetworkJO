@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
-#include<ctime>
-
+#include <ctime>
+#pragma once
 using namespace std;
 
 class Message

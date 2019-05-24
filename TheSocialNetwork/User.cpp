@@ -1,28 +1,35 @@
+//
+//  User.cpp
+//  TheSocialNetwork
+//
+//  Created by Γιάννης Λουδάρος on 24/05/2019.
+//  Copyright © 2019 Γιαννης Λουδαρος. All rights reserved.
+//
+
+#include "User.hpp"
 #include <iostream>
 #include <string>
 #include <vector>
 #include <ctime>
-
-using namespace std;
-
 #include "FriendRequest.h"
 #include "Message.h"
+#pragma once
+using namespace std;
 
 
-
-class User {
+class user {
     
 private:
     string email;
     string name;
-    vector<User*> friendlist;
-    vector<FriendRequest*> reqrec;
-    vector<FriendRequest*> reqsent;
+    vector<user*> friendlist;
+    vector<friendRequest*> reqrec;
+    vector<friendRequest*> reqsent;
     Wall wall;
     
 public:
-    void sentrequest(User senter,User receiver);
-    FriendRequest
+    void sentrequest(user senter,user receiver);
+   
     
     
     void checkrequests();
@@ -33,11 +40,11 @@ public:
     
     
     
-    void post(Wall a);
+    void post(wall a);
     
     
     
-    void like(Message a);
+    void like(message a);
     
     
     

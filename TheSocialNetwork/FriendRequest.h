@@ -4,8 +4,9 @@
 #include <vector>
 #include <ctime>
 #include "User.h"
+#pragma once
 
-class FriendRequest {
+class friendRequest {
     
 private:
     User senter;
@@ -16,7 +17,7 @@ private:
     
 public:
     void statuschange(){
-        this.statuscheck()
+        this->statuscheck();
         
         cout<<"New status: ";
         cin>>status;
@@ -30,7 +31,7 @@ public:
         else  cout<<"rejected"<<endl;
     }
     
-    void FriendRequest(User senter, User receiver) {
+    friendRequest(user senter, user receiver) {
         
     }
 };
