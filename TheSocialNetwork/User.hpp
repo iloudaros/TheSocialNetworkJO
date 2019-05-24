@@ -1,13 +1,20 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "FriendRequest.hpp"
+using namespace std;
+
+
+
+
+
+//#pragma once
 
 using namespace std;
-//#pragma once
 
 
 class user {
-    
+
 private:
     string email;
     string name;
@@ -15,40 +22,40 @@ private:
     vector<friendRequest*> reqrec;
     vector<friendRequest*> reqsent;
     wall wall;
-    
+
 public:
-	
+
     void sentrequest(user senter,user receiver);
-   
-    
-    
+
+
+
     void checkrequests();
-    
-    
-    
+
+
+
     void remfriend();
-    
-    
-    
+
+
+
     void post(wall a);
-    
-    
-    
+
+
+
     void like(message a);
-    
-    
-    
+
+
+
     void friends();
-    
-    
-    
+
+
+
     void getname();
-    
+
     void setname();
-    
-    
-    
+
+
+
     void getemail();
-    
+
     void setemail();
 };
