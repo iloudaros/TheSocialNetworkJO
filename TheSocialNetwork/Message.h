@@ -4,7 +4,7 @@
 #pragma once
 using namespace std;
 
-class Message
+class message
 {
     /*
      struct tm
@@ -34,7 +34,8 @@ class Message
         cin >> user;
         cout << "Write a message." << endl;
         cin >> message;
-    }
+    };
+    
     void toString()
     {
         time_t curr_time;

@@ -13,7 +13,6 @@
 #include <ctime>
 #include "FriendRequest.h"
 #include "Message.h"
-#pragma once
 using namespace std;
 
 
@@ -25,7 +24,7 @@ private:
     vector<user*> friendlist;
     vector<friendRequest*> reqrec;
     vector<friendRequest*> reqsent;
-    Wall wall;
+    wall wall;
     
 public:
     void sentrequest(user senter,user receiver);
