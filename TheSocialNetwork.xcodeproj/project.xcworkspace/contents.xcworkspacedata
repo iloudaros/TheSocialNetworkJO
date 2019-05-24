@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:TheSocialNetwork.xcodeproj">
+      location = "group:../TheSocialNetwork/Message.cpp">
+   </FileRef>
+   <FileRef
+      location = "group:../TheSocialNetwork/Message.hpp">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>
