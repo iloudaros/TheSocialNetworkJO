@@ -11,6 +11,7 @@
 		94FBC97A229863430075EE96 /* User.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 94FBC978229863430075EE96 /* User.cpp */; };
 		94FBC97D22986FAB0075EE96 /* FriendRequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 94FBC97B22986FAB0075EE96 /* FriendRequest.cpp */; };
 		94FBC980229875060075EE96 /* Message.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 94FBC97E229875060075EE96 /* Message.cpp */; };
+		94FBC98222987B8A0075EE96 /* Wall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 94FBC98122987B8A0075EE96 /* Wall.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		94FBC97C22986FAB0075EE96 /* FriendRequest.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FriendRequest.hpp; sourceTree = "<group>"; };
 		94FBC97E229875060075EE96 /* Message.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Message.cpp; sourceTree = "<group>"; };
 		94FBC97F229875060075EE96 /* Message.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Message.hpp; sourceTree = "<group>"; };
+		94FBC98122987B8A0075EE96 /* Wall.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Wall.cpp; sourceTree = "<group>"; };
+		94FBC98322987BA80075EE96 /* Wall.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Wall.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,8 @@
 				94FBC97C22986FAB0075EE96 /* FriendRequest.hpp */,
 				94FBC978229863430075EE96 /* User.cpp */,
 				94FBC979229863430075EE96 /* User.hpp */,
+				94FBC98122987B8A0075EE96 /* Wall.cpp */,
+				94FBC98322987BA80075EE96 /* Wall.hpp */,
 			);
 			path = TheSocialNetwork;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 				94FBC980229875060075EE96 /* Message.cpp in Sources */,
 				94FBC97D22986FAB0075EE96 /* FriendRequest.cpp in Sources */,
 				94FBC96E229849260075EE96 /* main.cpp in Sources */,
+				94FBC98222987B8A0075EE96 /* Wall.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

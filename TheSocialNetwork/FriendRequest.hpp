@@ -1,11 +1,12 @@
-#include <stdio.h>
 #include "User.hpp"
 #pragma once
+
+
+
 using namespace std;
 
 
 class friendRequest {
-    
 private:
     user senter;
     user receiver;

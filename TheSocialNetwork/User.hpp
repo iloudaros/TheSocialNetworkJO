@@ -1,12 +1,11 @@
-#include <iostream>
-#include <string>
-#include <vector>
 #include "FriendRequest.hpp"
-
+#include "Wall.hpp"
+#include <iostream>
+#include <vector>
 #pragma once
-
-
 using namespace std;
+
+
 
 class user {
     
@@ -14,9 +13,9 @@ private:
     string email;
     string name;
     vector<user*> friendlist;
-    vector<friendRequest*> reqrec;
-    vector<friendRequest*> reqsent;
-    wall wall;
+    vector<friendRequest> reqrec;
+    vector<friendRequest> reqsent;
+    wall mywall;
     
 public:
 
@@ -31,11 +30,10 @@ public:
     
     
     
-    void post(wall a);
+    void post();
     
     
-    
-    void like(message a);
+    void like();
     
     
     
