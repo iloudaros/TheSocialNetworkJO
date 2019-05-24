@@ -1,6 +1,7 @@
 #include <ctime>
 #include <string>
-//#pragma once
+#include "User.hpp"
+#pragma once
 
 using namespace std;
 
@@ -10,7 +11,7 @@ class message
  	
  	
     tm date;
-    string message;
+    string text;
     user sender;
     user receiver;
     string response;
@@ -23,5 +24,5 @@ class message
 
     message(user A,user B);
     void toString();
-}
+};
 

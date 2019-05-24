@@ -2,16 +2,9 @@
 #include <string>
 #include <vector>
 #include "FriendRequest.hpp"
-using namespace std;
-
-
-
-
-
-//#pragma once
+#pragma once
 
 using namespace std;
-
 
 class user {
 
@@ -25,7 +18,7 @@ private:
 
 public:
 
-    void sentrequest(user senter,user receiver);
+    void sentrequest(user,user);
 
 
 
