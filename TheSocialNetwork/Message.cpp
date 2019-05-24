@@ -2,49 +2,31 @@
 #include <string>
 #include <ctime>
 #include <vector>
+#include "Message.hpp"
 
 using namespace std;
 
-class Message
-{
-    /*
-     struct tm
-     {
-     int tm_sec;
-     int tm_min;
-     int tm_hour;
-     int tm_mday;
-     int tm_mon;
-     int tm_year;
-     }
-     */
-    private :
-    tm date;
-    string message;
-    user sender;
-    user receiver;
-    string response;
-    int likes;
-    
-    public :
-    
-    cout << "Do you want to reply to the message?" << endl;
-    
-    void post()
+
+    message::message(user A,user B)
     {
         cout << "Write a message." << endl;
         cin >> message;
         
-        time_t curr_time;
-        curr_time = time(NULL);
-        char *tm = ctime(&curr_time);
-    }
-    void toString()
+        time_t date;
+        date = time(NULL);
+        char *tm = ctime(&date);
+        
+        sender = A.name;
+        receiver = B.name;
+        
+        likes = 0;
+    }    
+    meesage::toString()
     {
         cout << tm << endl;
-        
-		cout << user.sender << endl;
-		
+        cout << user.sender << endl;
+		cout << message << endl;
+		cout << "Like number: " << likes << endl;
     }
     
 }
