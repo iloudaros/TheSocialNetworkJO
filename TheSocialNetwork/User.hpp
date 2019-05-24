@@ -1,7 +1,7 @@
-#include "FriendRequest.hpp"
-#include "Wall.hpp"
 #include <iostream>
 #include <vector>
+#include "FriendRequest.hpp"
+#include "Wall.hpp"
 #pragma once
 using namespace std;
 

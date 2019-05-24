@@ -36,7 +36,7 @@
 		94FBC97F229875060075EE96 /* Message.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Message.hpp; sourceTree = "<group>"; };
 		94FBC98122987B8A0075EE96 /* Wall.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Wall.cpp; sourceTree = "<group>"; };
 		94FBC98322987BA80075EE96 /* Wall.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Wall.hpp; sourceTree = "<group>"; };
-		94FBC9842298819F0075EE96 /* FriendRequest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FriendRequest.hpp; sourceTree = "<group>"; };
+		94FBC98522988D5C0075EE96 /* FriendRequest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FriendRequest.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,9 +73,9 @@
 				94FBC97F229875060075EE96 /* Message.hpp */,
 				94FBC96D229849260075EE96 /* main.cpp */,
 				94FBC97B22986FAB0075EE96 /* FriendRequest.cpp */,
+				94FBC98522988D5C0075EE96 /* FriendRequest.hpp */,
 				94FBC978229863430075EE96 /* User.cpp */,
 				94FBC979229863430075EE96 /* User.hpp */,
-				94FBC9842298819F0075EE96 /* FriendRequest.hpp */,
 				94FBC98122987B8A0075EE96 /* Wall.cpp */,
 				94FBC98322987BA80075EE96 /* Wall.hpp */,
 			);
