@@ -7,7 +7,9 @@
 #pragma once
 
 
-void friendRequest::statuschange(){
+void friendRequest::statuschange()
+
+    {
         statuscheck();
         
         cout<<"New status: ";
@@ -15,12 +17,19 @@ void friendRequest::statuschange(){
         cout<<endl;
     }
 
-void friendRequest::statuscheck(){
+
+
+void friendRequest::statuscheck()
+
+    {
         cout<<"Current status: ";
         if (status==0) cout<<"pending"<<endl;
         else if (status==1)cout<<"accepted"<<endl;
         else  cout<<"rejected"<<endl;
     }
+
+
+
     
     friendRequest::friendRequest(user A, user B) {
         
