@@ -2,10 +2,11 @@
 #include <string>
 #include <vector>
 #include "FriendRequest.hpp"
-//#pragma once
+
+#pragma once
+
 
 using namespace std;
-
 
 class user {
     
@@ -18,11 +19,10 @@ private:
     wall wall;
     
 public:
-	
-    void sentrequest(user sender,user receiver);
-   
-    
-    
+
+    void sentrequest(user,user);
+
+
     void checkrequests();
     
     

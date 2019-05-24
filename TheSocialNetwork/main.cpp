@@ -1,4 +1,6 @@
 #include "User.hpp"
+#include "FriendRequest.hpp"
+#include "Message.hpp"
 #include <iostream>
 
 using namespace std;
