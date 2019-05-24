@@ -4,7 +4,6 @@
 #include <vector>
 #include <ctime>
 #include "User.hpp"
-#pragma once
 
 
 void friendRequest::statuschange()
