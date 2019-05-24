@@ -3,14 +3,14 @@
 #include <string>
 #include <vector>
 #include <ctime>
-#include "User.h"
+#include "User.hpp"
 #pragma once
 
 class friendRequest {
     
 private:
-    User senter;
-    User receiver;
+    user senter;
+    user receiver;
     int status;
     string text;
     time_t timestamp;
