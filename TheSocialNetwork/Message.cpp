@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
-#include<ctime>
+#include <ctime>
+#include <vector>
 
 using namespace std;
 
@@ -20,30 +21,30 @@ class Message
     private :
     tm date;
     string message;
-    string user;
+    user sender;
+    user receiver;
     string response;
     int likes;
     
     public :
     
-    
+    cout << "Do you want to reply to the message?" << endl;
     
     void post()
     {
-        cout << "Give me your user name." << endl;
-        cin >> user;
         cout << "Write a message." << endl;
         cin >> message;
-    }
-    void toString()
-    {
+        
         time_t curr_time;
         curr_time = time(NULL);
         char *tm = ctime(&curr_time);
-        cout << "Today is : " << tm << endl;
+    }
+    void toString()
+    {
+        cout << tm << endl;
         
-        
-        cout <<  <<
+		cout << user.sender << endl;
+		
     }
     
 }
