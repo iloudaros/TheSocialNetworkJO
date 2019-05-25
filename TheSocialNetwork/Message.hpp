@@ -11,10 +11,10 @@ class message
  private :
  	
     tm date;
-    string text;
+    std::string text;
     user* sender;
     user* receiver;
-    string response;
+    std::string response;
     int likes;
     
     

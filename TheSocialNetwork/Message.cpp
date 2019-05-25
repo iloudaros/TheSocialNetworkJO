@@ -25,7 +25,6 @@ using namespace std;
 
  void   message::toString()
     {
-        cout << tm << endl;
         cout << sender << endl;
 		cout << text << endl;
 		cout << "Like number: " << likes << endl;

@@ -1,5 +1,7 @@
 #pragma once
 #include "User.hpp"
+#include <string>
+#include <ctime>
 
 
 class user;
@@ -10,7 +12,7 @@ private:
     user* senter;
     user* receiver;
     int status;
-    string text;
+    std::string text;
     time_t timestamp;
     
 public:

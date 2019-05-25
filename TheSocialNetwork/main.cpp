@@ -10,7 +10,6 @@ int main()
 
 {
     cout<<"MalakaGianni";
-    system("PAUSE");
     return 0;
 }
 

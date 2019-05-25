@@ -5,15 +5,16 @@
 #include <ctime>
 #include "User.hpp"
 
+using std::endl;
 
 void friendRequest::statuschange()
 
     {
         statuscheck();
         
-        cout<<"New status: ";
-        cin>>status;
-        cout<<endl;
+        std::cout<<"New status: ";
+        std::cin>>status;
+        std::cout<<endl;
     }
 
 
@@ -21,16 +22,16 @@ void friendRequest::statuschange()
 void friendRequest::statuscheck()
 
     {
-        cout<<"Current status: ";
-        if (status==0) cout<<"pending"<<endl;
-        else if (status==1)cout<<"accepted"<<endl;
-        else  cout<<"rejected"<<endl;
+        std::cout<<"Current status: ";
+        if (status==0) std::cout<<"pending"<<endl;
+        else if (status==1)std::cout<<"accepted"<<endl;
+        else  std::cout<<"rejected"<<endl;
     }
 
 
 
     
-    friendRequest::friendRequest(user A, user B) {
+    friendRequest::friendRequest(user* A, user* B) {
         
     };
 

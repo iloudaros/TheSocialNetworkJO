@@ -6,7 +6,7 @@
 #include <vector>
 
 
-
+class friendRequest;
 
 class user {
 
@@ -42,13 +42,13 @@ public:
 
 
 
-    string getname();
+    std::string getname();
 
     void setname();
 
 
 
-    string getemail();
+    std::string getemail();
 
     void setemail();
 };
