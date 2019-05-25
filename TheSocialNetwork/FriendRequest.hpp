@@ -2,14 +2,13 @@
 #include "User.hpp"
 
 
-
-using namespace std;
+class user;
 
 
 class friendRequest {
 private:
-    user senter;
-    user receiver;
+    user* senter;
+    user* receiver;
     int status;
     string text;
     time_t timestamp;
@@ -19,5 +18,5 @@ public:
     
     void statuscheck();
     
-    friendRequest(user ,user );
+    friendRequest(user* ,user* );
 };

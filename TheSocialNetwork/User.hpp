@@ -5,18 +5,17 @@
 #include <iostream>
 #include <vector>
 
-using namespace std;
 
 
 
 class user {
 
 private:
-    string email;
-    string name;
-    vector<user*> friendlist;
-    vector<friendRequest> reqrec;
-    vector<friendRequest> reqsent;
+    std::string email;
+    std::string name;
+    std::vector<user*> friendlist;
+    std::vector<friendRequest> reqrec;
+    std::vector<friendRequest> reqsent;
     wall mywall;
 
 public:

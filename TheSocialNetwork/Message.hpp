@@ -3,14 +3,12 @@
 #include <string>
 #include "User.hpp"
 
-
-using namespace std;
+class user;
 
 class message
 
 {   
  private :
- 	
  	
     tm date;
     string text;
