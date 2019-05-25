@@ -14,8 +14,8 @@ class message
  	
     tm date;
     string text;
-    user sender;
-    user receiver;
+    user* sender;
+    user* receiver;
     string response;
     int likes;
     
@@ -24,6 +24,6 @@ class message
     public :
     
 
-    message(user A,user B);
+    message(user&,user&);
     void toString();
 };

@@ -8,6 +8,8 @@
 
 using namespace std;
 
-
+string user::getname(){
+    return name;
+}
 
 

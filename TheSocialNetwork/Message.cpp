@@ -7,20 +7,22 @@
 using namespace std;
 
 
-    message::message(user A,user B)
+    message::message(user& A,user& B)
     {
         cout << "Write a message." << endl;
-        cin >> message;
+        cin >> text ;
         
         time_t date;
         date = time(NULL);
         char *tm = ctime(&date);
         
-        sender = A.name;
-        receiver = B.name;
+        sender = &A;
+        receiver = &B;
         
         likes = 0;
-    }    
+    }
+
+
  void   message::toString()
     {
         cout << tm << endl;

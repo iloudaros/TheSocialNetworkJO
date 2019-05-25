@@ -43,13 +43,13 @@ public:
 
 
 
-    void getname();
+    string getname();
 
     void setname();
 
 
 
-    void getemail();
+    string getemail();
 
     void setemail();
 };
