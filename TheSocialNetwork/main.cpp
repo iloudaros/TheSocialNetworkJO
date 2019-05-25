@@ -9,7 +9,7 @@ using namespace std;
 int main()
 
 {
-    cout<<"MalakaGianni";
+    cout<<"Welcome to the most beautiful program ever made";
     return 0;
 }
 

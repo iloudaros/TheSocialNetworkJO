@@ -11,6 +11,7 @@ class friendRequest;
 class user {
 
 private:
+    static std::vector<user*> userlist;
     std::string email;
     std::string name;
     std::vector<user*> friendlist;
