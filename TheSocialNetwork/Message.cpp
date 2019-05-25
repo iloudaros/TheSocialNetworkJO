@@ -21,7 +21,7 @@ using namespace std;
         
         likes = 0;
     }    
-    meesage::toString()
+ void   message::toString()
     {
         cout << tm << endl;
         cout << user.sender << endl;
@@ -29,5 +29,5 @@ using namespace std;
 		cout << "Like number: " << likes << endl;
     }
     
-}
+
 

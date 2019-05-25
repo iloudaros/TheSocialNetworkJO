@@ -7,6 +7,7 @@
 using namespace std;
 
 class message
+
 {   
  private :
  	
@@ -26,4 +27,3 @@ class message
     message(user A,user B);
     void toString();
 };
-
