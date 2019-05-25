@@ -25,6 +25,8 @@ using namespace std;
 
  void   message::toString()
     {
+        
+        //Πρέπει να φτιάξεις το πως θα εκτυπώνεται η μεταβλητή tm
         cout << sender << endl;
 		cout << text << endl;
 		cout << "Like number: " << likes << endl;
