@@ -1,13 +1,13 @@
+#include "User.hpp"
 #include "FriendRequest.hpp"
 #include <iostream>
 #include <string>
 #include <vector>
 #include <ctime>
-#include "User.hpp"
 
 using std::endl;
 
-void friendRequest::statuschange()
+void friendRequest::statuschange()//ready
 
     {
         statuscheck();
@@ -15,11 +15,13 @@ void friendRequest::statuschange()
         std::cout<<"New status: ";
         std::cin>>status;
         std::cout<<endl;
+        
+        statuscheck();
     }
 
 
 
-void friendRequest::statuscheck()
+void friendRequest::statuscheck()//ready
 
     {
         std::cout<<"Current status: ";
@@ -30,9 +32,17 @@ void friendRequest::statuscheck()
 
 
 
+
+    friendRequest::friendRequest(){};
+
     
-    friendRequest::friendRequest(user* A, user* B) {
+    friendRequest::friendRequest(user& A, user& B)//ready
+
+    {
+        sender= &A;
+        receiver= &B;
+        timestamp= time(NULL);
         
-    };
+    }
 
 

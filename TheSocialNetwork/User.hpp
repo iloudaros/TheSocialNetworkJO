@@ -24,21 +24,14 @@ public:
     
      static std::vector<user> userlist;
     
- user* setuser();
     
     
-    user();
-    user(std::string,std::string,std::string);
-
-    void sentrequest(user,user);
-
-
-    void checkrequests();
+    user();//ready
+    user(std::string,std::string,std::string);//ready
+    user* setuser();//ready
 
 
-
-    void remfriend();
-
+    void sentrequestto(user&);//ready
 
 
     void post();
@@ -47,17 +40,19 @@ public:
     void like();
 
 
-
     void friends();
+    
+    
+    void remfriend();
 
-
-
+    
+    
     std::string getname();
 
     void setname();
 
-
-
+    
+  
     std::string getemail();
 
     void setemail();

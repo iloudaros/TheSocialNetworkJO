@@ -9,10 +9,9 @@ class user;
 
 class friendRequest {
 private:
-    user* senter;
+    user* sender;
     user* receiver;
     int status;
-    std::string text;
     time_t timestamp;
     
 public:
@@ -20,5 +19,7 @@ public:
     
     void statuscheck();
     
-    friendRequest(user* ,user* );
+    friendRequest(user&,user&);
+    
+    friendRequest();
 };

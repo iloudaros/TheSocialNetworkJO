@@ -68,7 +68,7 @@ int main()
             
             
         case 7:
-            cout<<"Thaaank you, next!\n\n";
+            cout<<"Thaaank you, next! <3\n\n";
 
             /*do{ cout<<"Do you wanna login(1) or create an account(2)?";
              cin>>choice;
