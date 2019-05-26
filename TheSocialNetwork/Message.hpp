@@ -1,7 +1,10 @@
 #pragma once
+
+
+#include "User.hpp"
 #include <ctime>
 #include <string>
-#include "User.hpp"
+#include <vector>
 
 class user;
 
@@ -16,6 +19,7 @@ class message
     user* receiver;
     std::string response;
     int likes;
+    std::vector<user*> likedby;
     
     
     
