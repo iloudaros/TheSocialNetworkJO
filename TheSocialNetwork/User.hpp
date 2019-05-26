@@ -34,7 +34,7 @@ public:
     void sentrequestto(user&);//ready
 
 
-    void post();
+    void postto();
 
 
     void like();
