@@ -8,6 +8,9 @@
 
 using namespace std;
 
+vector<user> user::userlist;
+
+
 string user::getname(){
     return name;
 }

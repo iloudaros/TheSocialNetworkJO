@@ -6,7 +6,6 @@
 
 using namespace std;
 
-vector<user> user::userlist;
 int main()
 
 {
@@ -17,7 +16,8 @@ int main()
     
     
    int choice;
-    user currentlyin;
+   user currentlyin;
+    
    /*do{ cout<<"Do you wanna login(1) or create an account(2)?";
        cin>>choice;
        if (choice !=1 & choice != 2) cout<<"You only have two choices hun, it's not _that_ difficult \n";
