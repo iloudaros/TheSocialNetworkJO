@@ -11,15 +11,24 @@ class friendRequest;
 class user {
 
 private:
-    static std::vector<user*> userlist;
+   
     std::string email;
     std::string name;
+    std::string password;
     std::vector<user*> friendlist;
     std::vector<friendRequest> reqrec;
     std::vector<friendRequest> reqsent;
     wall mywall;
 
 public:
+    
+     static std::vector<user> userlist;
+    
+ user* setuser();
+    
+    
+    user();
+    user(std::string,std::string,std::string);
 
     void sentrequest(user,user);
 
