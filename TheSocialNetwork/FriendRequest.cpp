@@ -33,7 +33,7 @@ void friendRequest::statuscheck()//ready
 
 
 
-    friendRequest::friendRequest(){};
+    friendRequest::friendRequest(){};//ready
 
     
     friendRequest::friendRequest(user& A, user& B)//ready

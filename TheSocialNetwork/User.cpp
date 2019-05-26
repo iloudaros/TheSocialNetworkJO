@@ -10,6 +10,10 @@ using namespace std;
 
 vector<user> user::userlist;
 
+
+
+
+
 user::user(){};//ready
 
 user::user(string a,string b,string c)//ready
@@ -22,9 +26,28 @@ user::user(string a,string b,string c)//ready
 
 
 
+
+
+void user::setname(string newname)//ready
+{
+    name=newname;
+}
+
 string user::getname()//ready
 {
     return name;
+}
+
+
+
+void user::setemail(string newemail)//ready
+{
+    email=newemail;
+}
+
+string user::getemail()//ready
+{
+    return email;
 }
 
 
@@ -43,7 +66,9 @@ void user::sentrequestto(user & receiver)//ready
 
 
 
-user* user::setuser(){
+user* user::setuser()//ready
+
+ {
     cout<<"Well hello there you beautiful user darling\nPlease give me your name: ";
     cin>>name;
     cout<<"Fantastic! Now give me your e-mail: ";
@@ -52,7 +77,7 @@ user* user::setuser(){
     cin>>password;
     cout<<"You are now registered and ready to go";
     return this;
-}
+ }
 
 
 

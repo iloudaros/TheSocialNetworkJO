@@ -7,19 +7,21 @@
 class user;
 
 
-class friendRequest {
-private:
+class friendRequest//ready
+
+{
+ private:
     user* sender;
     user* receiver;
     int status;
     time_t timestamp;
     
-public:
-    void statuschange();
+ public:
+    void statuschange();//ready
     
-    void statuscheck();
+    void statuscheck();//eady
     
-    friendRequest(user&,user&);
+    friendRequest(user&,user&);//ready
     
-    friendRequest();
+    friendRequest();//ready
 };

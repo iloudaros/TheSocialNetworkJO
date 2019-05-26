@@ -34,26 +34,26 @@ public:
     void sentrequestto(user&);//ready
 
 
-    void postto();
+    void postto(user&);
 
 
-    void like();
+    void like(message&);
 
 
     void friends();
     
     
-    void remfriend();
+    void remfriend(user&);
 
     
     
-    std::string getname();
+    std::string getname();//ready
 
-    void setname();
+    void setname(std::string);//ready
 
     
   
-    std::string getemail();
+    std::string getemail();//ready
 
-    void setemail();
+    void setemail(std::string);//ready
 };
