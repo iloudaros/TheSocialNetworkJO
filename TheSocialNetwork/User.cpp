@@ -13,8 +13,6 @@ vector<user> user::userlist;
 
 
 
-
-
 user::user(){};//ready
 
 user::user(string a,string b,string c)//ready
@@ -23,8 +21,6 @@ user::user(string a,string b,string c)//ready
     this->email=b;
     this->password=c;
 }
-
-
 
 
 
@@ -53,8 +49,6 @@ string user::getemail()//ready
 
 
 
-
-
 void user::sentrequestto(user & receiver)//ready
 
     {
@@ -62,8 +56,6 @@ void user::sentrequestto(user & receiver)//ready
     this->reqsent.push_back(temp);
     receiver.reqrec.push_back(temp);
     }
-
-
 
 
 
@@ -88,7 +80,6 @@ void user::accept(int choice)//ready
     reqrec.erase(reqrec.begin() + (choice-1));
     cout<< "\n\nYou are now friends with "<< friendlist[friendlist.size()-1]->name;
 }
-
 
 void user::reject(int choice)//ready
 {
