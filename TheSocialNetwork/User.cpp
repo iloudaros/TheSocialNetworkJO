@@ -70,7 +70,7 @@ user* user::setuser()//ready
 
  {
     cout<<"Well hello there you beautiful user darling\nPlease give me your name: ";
-    cin>>name;
+    getline(cin,name);
     cout<<"Fantastic! Now give me your e-mail: ";
     cin>>email;
     cout<<"Great! Now I'll need yout to choose a password: ";

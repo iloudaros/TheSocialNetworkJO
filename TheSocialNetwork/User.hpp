@@ -33,15 +33,15 @@ public:
 
     void sentrequestto(user&);//ready
 
+    void accept(friendRequest&);
+    
+    void reject(friendRequest&);
 
     void postto(user&);
 
-
     void like(message&);
 
-
-    void friends();
-    
+    void showfriends();
     
     void remfriend(user&);
 
