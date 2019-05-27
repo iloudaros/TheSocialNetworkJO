@@ -33,9 +33,9 @@ public:
 
     void sentrequestto(user&);//ready
 
-    void accept(friendRequest&);
+    void accept(int);//ready
     
-    void reject(friendRequest&);
+    void reject(int);//ready
 
     void postto(user&);
 

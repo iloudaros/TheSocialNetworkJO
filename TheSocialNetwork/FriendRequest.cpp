@@ -46,3 +46,7 @@ void friendRequest::statuscheck()//ready
     }
 
 
+user* friendRequest::getsender()
+{
+    return sender;
+}

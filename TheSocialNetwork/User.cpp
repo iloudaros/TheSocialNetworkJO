@@ -1,10 +1,11 @@
+#include "FriendRequest.hpp"
+#include "Message.hpp"
 #include "User.hpp"
+
 #include <iostream>
 #include <string>
 #include <vector>
 #include <ctime>
-#include "FriendRequest.hpp"
-#include "Message.hpp"
 
 using namespace std;
 
@@ -80,6 +81,20 @@ user* user::setuser()//ready
  }
 
 
+
+void user::accept(int choice)//ready
+{
+    friendlist.push_back(reqrec[choice-1].getsender());
+    reqrec.erase(reqrec.begin() + (choice-1));
+    cout<< "\n\nYou are now friends with "<< friendlist[friendlist.size()-1]->name;
+}
+
+
+void user::reject(int choice)//ready
+{
+    reqrec.erase(reqrec.begin() + (choice-1));
+    cout<<"\n\n Thaaaank you, next\n";
+}
 
 
 

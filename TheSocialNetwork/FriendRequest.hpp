@@ -24,4 +24,6 @@ class friendRequest//ready
     friendRequest(user&,user&);//ready
     
     friendRequest();//ready
+    
+    user* getsender();
 };
