@@ -2,6 +2,7 @@
 
 
 #include "User.hpp"
+
 #include <ctime>
 #include <string>
 #include <vector>
@@ -27,5 +28,5 @@ class message
     
 
     message(user&,user&);
-    void toString();
+    std::string toString();
 };

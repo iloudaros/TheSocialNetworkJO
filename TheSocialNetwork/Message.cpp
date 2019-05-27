@@ -23,14 +23,13 @@ using namespace std;
     }
 
 
- void   message::toString()
+ string message::toString()
     {
         
         //Πρέπει να φτιάξεις το πως θα εκτυπώνεται η μεταβλητή tm
         //Και πως θα βγάζει τα like (φρόντισε ο καθένας να μπορεί να κάνει like μόνο μια φορά
-        cout << sender << endl;
-		cout << text << endl;
-		cout << "Like number: " << likes << endl;
+        return sender , "\n", text, "\n","Like number: ",likes,"\n";
+		
     }
     
 

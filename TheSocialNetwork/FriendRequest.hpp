@@ -1,5 +1,7 @@
 #pragma once
+
 #include "User.hpp"
+
 #include <string>
 #include <ctime>
 
@@ -25,5 +27,5 @@ class friendRequest//ready
     
     friendRequest();//ready
     
-    user* getsender();
+    user* getsender();//ready
 };

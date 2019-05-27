@@ -62,10 +62,26 @@ void user::sentrequestto(user & receiver)//ready
 user* user::setuser()//ready
 
  {
+     
     cout<<"Well hello there you beautiful user darling\nPlease give me your name: ";
     getline(cin,name);
+     
+     int check=0;
+     int i;
+     
+         
     cout<<"Fantastic! Now give me your e-mail: ";
+     do{
     cin>>email;
+         for(i=0;i!=user::userlist.size();i++)
+             if (userlist[i].email==email)
+             {
+                 check=1;
+                 cout<<"\n\nThe given email is already in use. -.- \n\nTry again:";
+                 break;
+             }
+     }while(check==1);
+     
     cout<<"Great! Now I'll need yout to choose a password: ";
     cin>>password;
     cout<<"You are now registered and ready to go";
@@ -88,6 +104,7 @@ void user::reject(int choice)//ready
 }
 
 
-
-
-
+string user::getpassword()
+{    
+ return password;
+}

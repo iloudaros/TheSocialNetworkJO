@@ -1,5 +1,6 @@
 #include "User.hpp"
 #include "FriendRequest.hpp"
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -46,7 +47,7 @@ void friendRequest::statuscheck()//ready
     }
 
 
-user* friendRequest::getsender()
+user* friendRequest::getsender()//ready
 {
     return sender;
 }
