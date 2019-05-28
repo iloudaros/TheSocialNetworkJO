@@ -115,11 +115,13 @@ string user::getpassword()//ready
 void user::showwall()
 {
     int i;
-    cout<< owner->getname();
-    
-    for(i=0;i<posts.size();i++)
-    {
-        cout<< posts[i].toString();
+    cout<< name<<endl;
+    if(posts.size()==0) cout<<"This wall is empty :(";
+    else{
+        for(i=0;i<posts.size();i++)
+        {
+            cout<< posts[i].toString();
+        }
     }
 }
 

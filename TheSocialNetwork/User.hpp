@@ -17,13 +17,14 @@ private:
     std::string email;
     std::string name;
     std::string password;
-    std::vector<user*> friendlist;
     std::vector<friendRequest> reqrec;
     std::vector<friendRequest> reqsent;
     std::vector<message> posts;
 
 public:
     
+     std::vector<user*> friendlist;
+
      static std::vector<user> userlist;
     
     

@@ -1,8 +1,6 @@
 #include "User.hpp"
 #include "FriendRequest.hpp"
 #include "Message.hpp"
-#include "User.hpp"
-#include "Wall.hpp"
 
 using namespace std;
 
@@ -88,13 +86,32 @@ int main()
     
     switch (choice) {
         case 1:
-            //see your wall
+            currentlyin->showwall();
             break;
+            
+            
+            
+            
+            
+            
             
             
         case 2:
-            //see friend's wall
+            int i;
+            for(i=0;i<currentlyin->friendlist.size();i++)
+                cout<<i+1<<currentlyin->friendlist[i]->getname()<<endl;
+            cout<< "Choose the number of the friend you wanna stalk"<<endl;
+            cin>>choice;
+            currentlyin->friendlist[choice]->showwall();
+        
             break;
+            
+            
+            
+            
+            
+            
+            
             
             
         case 3:
@@ -102,9 +119,21 @@ int main()
             break;
             
             
+            
+            
+            
+            
+            
+            
         case 4:
             //accept/reject
             break;
+            
+            
+            
+            
+            
+            
             
             
         case 5:
@@ -112,9 +141,21 @@ int main()
             break;
             
             
+            
+            
+            
+            
+            
+            
         case 6:
             //Back
             break;
+            
+            
+            
+            
+            
+            
             
             
         case 7:
@@ -177,6 +218,14 @@ int main()
             };
            
             break;
+            
+            
+            
+            
+            
+            
+            
+            
             
             
         case 8:
