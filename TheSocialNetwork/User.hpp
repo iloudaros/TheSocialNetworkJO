@@ -1,13 +1,15 @@
 #pragma once
 
+
 #include "FriendRequest.hpp"
-#include "Wall.hpp"
 #include "Message.hpp"
 
 #include <iostream>
 #include <vector>
 
 class wall;
+
+#include "Wall.hpp"
 class friendRequest;
 class message;
 
@@ -21,7 +23,7 @@ private:
     std::vector<user*> friendlist;
     std::vector<friendRequest> reqrec;
     std::vector<friendRequest> reqsent;
-    wall mywall;
+    wall* mywall;
 public:
     
      static std::vector<user> userlist;

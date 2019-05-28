@@ -15,6 +15,7 @@ wall::wall(){};
 void wall::showwall()
 {
     int i;
+    cout<< owner->getname();
     
     for(i=0;i<posts.size();i++)
     {

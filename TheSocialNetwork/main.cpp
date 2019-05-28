@@ -17,9 +17,9 @@ int main()
     
    int choice;
    user newuser;
-   user* currentlyin;
-    
-   do{ cout<<"Do you wanna login(1) or create an account(2)?";
+   user* currentlyin = nullptr;
+
+    do{ cout<<"Do you wanna login(1) or create an account(2)?";
        cin>>choice;
        if (choice !=1 & choice != 2) cout<<"You only have two choices hun, it's not _that_ difficult :) \n";
    }while(choice !=1 & choice != 2);
@@ -58,7 +58,7 @@ int main()
         do{
             
         cin>>lpassword;
-            if (user::userlist[position].getpassword()!=lpassword) cout<< "Incorrect password.(Our security is impenetrable.)(To exw pathei kai se sxesh.) /n Try again: /n";
+            if (user::userlist[position].getpassword()!=lpassword) cout<< "Incorrect password.(Our security is impenetrable.)\n(To exw pathei kai se sxesh.) \n Try again:\n";
             
             
         }while(lpassword!=user::userlist[position].getpassword());
@@ -72,7 +72,10 @@ int main()
     
         newuser.setuser();
         user::userlist.push_back(newuser);
+        currentlyin=&(user::userlist[user::userlist.size()-1]);
     };
+    
+    
     
     
     
@@ -116,7 +119,62 @@ int main()
             
         case 7:
             cout<<"Thaaank you, next! <3\n\n";
-
+            currentlyin = nullptr;
+            do{ cout<<"Do you wanna login(1) or create an account(2)?";
+                cin>>choice;
+                if (choice !=1 & choice != 2) cout<<"You only have two choices hun, it's not _that_ difficult :) \n";
+            }while(choice !=1 & choice != 2);
+            
+            
+            if (choice==1){
+                
+                int i;
+                string lemail;
+                int check=0;
+                int position;
+                
+                cout<<"Give me your email:";
+                
+                do{
+                    cin>>lemail;
+                    
+                    
+                    for(i=0;i!=user::userlist.size();i++)
+                        if (user::userlist[i].getemail()==lemail)
+                        {
+                            check=1;
+                            position=i;
+                            break;
+                        }
+                        else {
+                            cout<<"\n\nThere is no user with that email.Try something else.\n\n";
+                        }
+                }while(check!=1);
+                
+                
+                
+                cout<<"Give me your password:";
+                string lpassword;
+                
+                do{
+                    
+                    cin>>lpassword;
+                    if (user::userlist[position].getpassword()!=lpassword) cout<< "Incorrect password.(Our security is impenetrable.)\n(To exw pathei kai se sxesh.) \n Try again: \n";
+                    
+                    
+                }while(lpassword!=user::userlist[position].getpassword());
+                
+                
+                currentlyin=&(user::userlist[position]);
+            }
+            
+            else if (choice==2) {
+                
+                
+                newuser.setuser();
+                user::userlist.push_back(newuser);
+                currentlyin=&(user::userlist[user::userlist.size()-1]);
+            };
            
             break;
             

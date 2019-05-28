@@ -1,6 +1,5 @@
 #pragma once
 
-
 #include "User.hpp"
 #include "Message.hpp"
 
@@ -8,11 +7,7 @@
 #include <vector>
 #include <string>
 
-class user;
 class message;
-
-
-
 
 class wall{
 

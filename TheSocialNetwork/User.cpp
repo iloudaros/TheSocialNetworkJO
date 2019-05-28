@@ -64,6 +64,8 @@ user* user::setuser()//ready
  {
      
     cout<<"Well hello there you beautiful user darling\nPlease give me your name: ";
+     string buff;
+    getline(cin, buff);
     getline(cin,name);
      
      int check=0;
