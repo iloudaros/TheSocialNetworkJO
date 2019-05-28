@@ -106,7 +106,20 @@ void user::reject(int choice)//ready
 }
 
 
-string user::getpassword()
+string user::getpassword()//ready
 {    
  return password;
 }
+
+
+void user::showwall()
+{
+    int i;
+    cout<< owner->getname();
+    
+    for(i=0;i<posts.size();i++)
+    {
+        cout<< posts[i].toString();
+    }
+}
+

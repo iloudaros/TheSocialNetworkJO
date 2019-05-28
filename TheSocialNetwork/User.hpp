@@ -7,9 +7,6 @@
 #include <iostream>
 #include <vector>
 
-class wall;
-
-#include "Wall.hpp"
 class friendRequest;
 class message;
 
@@ -23,7 +20,8 @@ private:
     std::vector<user*> friendlist;
     std::vector<friendRequest> reqrec;
     std::vector<friendRequest> reqsent;
-    wall* mywall;
+    std::vector<message> posts;
+
 public:
     
      static std::vector<user> userlist;
@@ -55,10 +53,12 @@ public:
 
     void setname(std::string);//ready
 
-    std::string getpassword();
+    std::string getpassword();//ready
     
   
     std::string getemail();//ready
 
     void setemail(std::string);//ready
+    
+     void showwall();//ready
 };
