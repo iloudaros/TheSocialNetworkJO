@@ -22,7 +22,7 @@ void initialization::inibasic(){
     }
     
     userlist[1].sentrequestto(userlist[0]);
-    userlist[0].accept(1);
+    userlist[0].acceptplain(1);
     
     
     

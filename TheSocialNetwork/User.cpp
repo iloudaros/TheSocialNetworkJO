@@ -90,11 +90,19 @@ user* user::setuser()//ready
 
 
 
-void user::accept(int choice)//ready
+void user::acceptplain(int choice)//ready
 {
     friendlist.push_back(reqrec[choice-1].getsender());
+    reqrec[choice-1].getsender()->friendlist.push_back(this);
     reqrec.erase(reqrec.begin() + (choice-1));
+    
+}
+
+void user::accept(int choice)
+{
+    acceptplain(choice);
     cout<< "\n\nYou are now friends with "<< friendlist[friendlist.size()-1]->name;
+    
 }
 
 void user::reject(int choice)//ready
@@ -155,15 +163,28 @@ void user::showfriends()//ready
         cout<<endl;
     }
     
-    cout<<"Do you hate anyone from this list?\n1.yes\n2.no\n\n";
+    /*cout<<"Do you hate anyone from this list?\n1.yes\n2.no\n\n";
     cin>> i;
     if (i==1)cout<<"Wanna unfriend them?\n1.yes\n2.no\n\n";
+    cin>> i;
     if (i==1)
     {
         cout<<"Give me their number:";
         cin>>i;
+        
+        int x;
+
+        for(x=0;x<friendlist[i]->friendlist.size();i++)
+            if (friendlist[i]->friendlist[x]->getemail()==this->getemail())
+            {
+                friendlist[i]->friendlist[x]->remfriend(x);
+                break;
+            }
+    
+        cout<<"You and "<<friendlist[i]->getname()<<"now hate each other\n\n";
         remfriend(i-1);
-    }
+        
+    }*/
 }
     
     
@@ -185,16 +206,16 @@ void user::like(int choice,user* currentlyin)//ready
     int i;
     int check=0;
     
-    if (posts[choice].likedby.size()==0) posts[choice-1].like();
+    if (currentlyin->posts[choice].likedby.size()==0) currentlyin->posts[choice-1].like(this);
         else
-            for (i=0;i<posts[choice].likedby.size();i++)
+            for (i=0;i<currentlyin->posts[choice].likedby.size();i++)
                     {
-                        if(posts[choice].likedby[i]->getemail()==currentlyin->getemail())check=1;
+                        if(currentlyin->posts[choice].likedby[i]->getemail()==this->getemail())check=1;
                         if(check==1)break;
                     }
     
     
-    if(check==0)posts[choice-1].like();
+    if(check==0)currentlyin->posts[choice-1].like(this);
     else
     {
         cout<<"\nYou have already liked this post.\n";

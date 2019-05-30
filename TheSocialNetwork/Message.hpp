@@ -32,6 +32,7 @@ class message
 
     message(user&,user&);//ready
     void toString();//ready
-    void like();//ready
+    void like(user*);//ready
+    void reply(user*);//ready
     
 };

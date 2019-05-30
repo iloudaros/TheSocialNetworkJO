@@ -11,6 +11,7 @@ using namespace std;
     {
         cout << "Write a message." << endl;
         getline(cin, text);
+        getline(cin, text);
         
         date = time(NULL);
         //char* tm = ctime(&date);
@@ -29,5 +30,19 @@ using namespace std;
        
     }
     
-void message::like(){likes++;}//ready
+void message::like(user* liker)//ready
+{
+    likes++;
+    
+    likedby.push_back(liker);
+    
+}
 
+
+void message::reply(user* replier)
+
+{
+    message temp(*replier,*receiver);
+    replies.push_back(temp);
+    
+}

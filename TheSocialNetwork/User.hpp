@@ -19,10 +19,10 @@ private:
     std::string password;
     std::vector<friendRequest> reqrec;
     std::vector<friendRequest> reqsent;
-    std::vector<message> posts;
 
 public:
-    
+     std::vector<message> posts;
+
      std::vector<user*> friendlist;
 
      static std::vector<user> userlist;
@@ -37,6 +37,7 @@ public:
     void sentrequestto(user&);//ready
 
     void accept(int);//ready
+    void acceptplain(int);//ready
     
     void reject(int);//ready
     
