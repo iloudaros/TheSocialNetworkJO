@@ -14,19 +14,24 @@ class message
 {   
  private :
  	
-    tm date;
+    time_t date;
     std::string text;
     user* sender;
     user* receiver;
     std::string response;
-    int likes;
-    std::vector<user*> likedby;
+    int likes=0;
+    
+    
     
     
     
     public :
-    
+    std::vector<user*> likedby;
+    std::vector<message> replies;
 
-    message(user&,user&);
-    std::string toString();
+
+    message(user&,user&);//ready
+    void toString();//ready
+    void like();//ready
+    
 };

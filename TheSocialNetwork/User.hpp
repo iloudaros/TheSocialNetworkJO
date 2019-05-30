@@ -39,14 +39,19 @@ public:
     void accept(int);//ready
     
     void reject(int);//ready
-
-    void postto(user&);
-
-    void like(message&);
-
-    void showfriends();
     
-    void remfriend(user&);
+    void showrequests();//ready
+    
+
+    void postto(user&);//ready
+
+    void like(int,user*);//ready
+    
+    
+
+    void showfriends();//ready
+    
+    void remfriend(int);//ready
 
     
     
