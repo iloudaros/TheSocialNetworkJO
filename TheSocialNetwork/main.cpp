@@ -95,16 +95,26 @@ start:
     
     
     
-    //Σε αυτό το σημείο κάποιος χρήστης είναι συνδεδεμένος και έτοιμος να χρησιμοποιήσει το πρόγραμμα
     
     
     
-in:
+   
+    
+    
+    
+in: //Σε αυτό το σημείο κάποιος χρήστης είναι συνδεδεμένος και έτοιμος να χρησιμοποιήσει το πρόγραμμα
     do{
     cout<< "\n\nLogged in as:"<<currentlyin->getname();
     cout<<"\n\n1. See your wall\n2. See friend's wall\n3. Send friend request\n4. Accept/Reject friend request\n5. See my friends\n6. Back\n7. Log out\n8. Exit\nPress the number of your choice:";
     
-    cin>>choice;
+    cin>>choice;//Ο χρήστης καλείται να επιλέξει τι θα κάνει από τις παραπάνω επιλογές
+        
+        
+        
+        
+        
+        
+        
     
     switch (choice) {
         case 1://Ο χρήστης βλέπει τον τοίχο του
@@ -143,9 +153,9 @@ in:
                         cout<<"Give me the post number:";
                         cin>>postnumber;
                         
-                        if(postnumber-1>currentlyin->friendlist[choice-1]->posts.size()|postnumber-1<0)cout<<"\n\nGive me the number of a post that exists -.- \n\n";
-                    }while(postnumber-1>currentlyin->friendlist[choice-1]->posts.size());
-                    currentlyin->friendlist[choice-1]->posts[postnumber-1].like(currentlyin->friendlist[choice-1]);
+                        if(postnumber-1>currentlyin->posts.size()|postnumber-1<0)cout<<"\n\nGive me the number of a post that exists -.- \n\n";
+                    }while(postnumber-1>currentlyin->posts.size());
+                    currentlyin->like(postnumber,currentlyin);
                 }
                     break;
                     
@@ -155,6 +165,8 @@ in:
             }
             
             break;
+            
+            
             
             
             
@@ -208,7 +220,7 @@ in:
                         
                         if(postnumber-1>currentlyin->friendlist[choice-1]->posts.size()|postnumber-1<0)cout<<"\n\nGive me the number of a post that exists -.- \n\n";
                     }while(postnumber-1>currentlyin->friendlist[choice-1]->posts.size());
-                    currentlyin->friendlist[choice-1]->posts[postnumber-1].like(currentlyin->friendlist[choice-1]);
+                    currentlyin->like(postnumber-1,currentlyin->friendlist[choice-1]);
                 }
                     break;
                     
@@ -218,6 +230,11 @@ in:
             }
                 
             break;
+            
+            
+            
+            
+            
             
             
             
@@ -282,6 +299,9 @@ in:
             
             
             
+            
+            
+            
         case 4://Ο χρήστης διαχειρίζεται τα αιτήματα φιλίας του
             
             currentlyin->showrequests();
@@ -308,14 +328,9 @@ in:
             
             
             
-            
         case 6:cout<<"\nThis is the very start, there is nothing back there, just some code\n";
             
             break;
-            
-            
-            
-            
             
             
             
@@ -325,11 +340,6 @@ in:
             currentlyin = nullptr;
             goto start;
             break;
-            
-            
-            
-            
-            
             
             
             

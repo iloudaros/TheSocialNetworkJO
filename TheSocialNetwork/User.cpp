@@ -207,6 +207,14 @@ void user::postto(user& A)//ready
     
 }
 
+void user::postto(user& A,string text)
+{
+    message temp(*this,A,text);
+    
+    A.posts.push_back(temp);
+    
+}
+
 
 
 void user::like(int choice,user* currentlyin)//ready
@@ -215,7 +223,11 @@ void user::like(int choice,user* currentlyin)//ready
     int i;
     int check=0;
     
-    if (currentlyin->posts[choice-1].likedby.size()==0) currentlyin->posts[choice-1].like(this);
+    if (currentlyin->posts[choice-1].likedby.size()==0)
+    {
+        currentlyin->posts[choice-1].like(this);
+        check=1;
+    }
         else
             for (i=0;i<currentlyin->posts[choice-1].likedby.size();i++)
                     {
@@ -243,7 +255,7 @@ void user::showrequests()
     for(i=0;i<reqrec.size();i++)
     {
         choice++;
-        cout<<choice<<". "<<reqrec[i].getsender()->getname()<<","<<reqrec[i].getsender()->getemail();
+        cout<<choice<<". "<<reqrec[i].getsender()->getname()<<","<<reqrec[i].getsender()->getemail()<<" "<<reqrec[i].gettime();
         results.push_back(&reqrec[i]);
     }
     cout<<"\nWhich request do you wanna examine?(Choose 0 to exit)\n";

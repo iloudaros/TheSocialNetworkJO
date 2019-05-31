@@ -28,4 +28,6 @@ class friendRequest//ready
     friendRequest();//ready
     
     user* getsender();//ready
+    
+    std::string gettime();//ready
 };

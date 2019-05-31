@@ -47,6 +47,15 @@ void friendRequest::statuscheck()//ready
     }
 
 
+
+std::string friendRequest::gettime()
+{
+    std::string time;
+    time=ctime(&timestamp);
+    return time;
+}
+
+
 user* friendRequest::getsender()//ready
 {
     return sender;

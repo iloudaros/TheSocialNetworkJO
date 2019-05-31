@@ -31,6 +31,7 @@ class message
 
 
     message(user&,user&);//ready
+    message(user&,user&,std::string);//ready
     void toString(int);//ready
     void like(user*);//ready
     void reply(user*);//ready

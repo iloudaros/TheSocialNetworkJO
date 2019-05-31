@@ -45,6 +45,8 @@ public:
     
 
     void postto(user&);//ready
+    
+    void postto(user& A,std::string text);//ready
 
     void like(int,user*);//ready
     

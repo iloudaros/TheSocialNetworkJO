@@ -22,19 +22,39 @@ using namespace std;
         likes = 0;
     }
 
+message::message(user& A,user& B,string text)
+{
+    this->text=text;
+    
+    date = time(NULL);
+    //char* tm = ctime(&date);
+    
+    sender = &A;
+    receiver = &B;
+    
+    likes = 0;
+}
+
+
 
  void message::toString(int depth)
     {
         int i;
-        cout<<sender->getname()<< date<<endl;
+        cout<<sender->getname()<<" -"<< ctime(&date);
         for (i=0; i<depth; i++) cout<<" ";
         cout<<"-------"<< endl;
         for (i=0; i<depth; i++) cout<<" ";
         cout<<text<< endl;
         for (i=0; i<depth; i++) cout<<" ";
         cout<<"-------"<< endl;
+        
+        if(depth==0)
+        {
         for (i=0; i<depth; i++) cout<<" ";
-        cout<<"Liked by: "<<likes<<(likes>1?" people":" person")<<endl;
+        cout<<"Liked by: ";
+        if (likes==0)cout<<"no one";
+        else cout<<likes<<(likes>1?" people":" person")<<endl;
+        }
        
     }
     

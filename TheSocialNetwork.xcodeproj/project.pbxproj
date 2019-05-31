@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		945275B5229A1B5200820666 /* Exceptions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 945275B3229A1B5200820666 /* Exceptions.cpp */; };
 		94F1D6C9229D479500FE475B /* Initialize.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 94F1D6C7229D479500FE475B /* Initialize.cpp */; };
 		94FBC96E229849260075EE96 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 94FBC96D229849260075EE96 /* main.cpp */; };
 		94FBC97A229863430075EE96 /* User.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 94FBC978229863430075EE96 /* User.cpp */; };
@@ -28,8 +27,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		945275B3229A1B5200820666 /* Exceptions.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Exceptions.cpp; sourceTree = "<group>"; };
-		945275B4229A1B5200820666 /* Exceptions.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Exceptions.hpp; sourceTree = "<group>"; };
 		94F1D6C7229D479500FE475B /* Initialize.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Initialize.cpp; sourceTree = "<group>"; };
 		94F1D6C8229D479500FE475B /* Initialize.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Initialize.hpp; sourceTree = "<group>"; };
 		94FBC96A229849260075EE96 /* TheSocialNetwork */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TheSocialNetwork; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,8 +74,6 @@
 				94FBC96D229849260075EE96 /* main.cpp */,
 				94F1D6C7229D479500FE475B /* Initialize.cpp */,
 				94F1D6C8229D479500FE475B /* Initialize.hpp */,
-				945275B3229A1B5200820666 /* Exceptions.cpp */,
-				945275B4229A1B5200820666 /* Exceptions.hpp */,
 				94FBC97B22986FAB0075EE96 /* FriendRequest.cpp */,
 				94FBC98522988D5C0075EE96 /* FriendRequest.hpp */,
 				94FBC978229863430075EE96 /* User.cpp */,
@@ -148,7 +143,6 @@
 				94FBC97D22986FAB0075EE96 /* FriendRequest.cpp in Sources */,
 				94F1D6C9229D479500FE475B /* Initialize.cpp in Sources */,
 				94FBC96E229849260075EE96 /* main.cpp in Sources */,
-				945275B5229A1B5200820666 /* Exceptions.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
