@@ -249,7 +249,7 @@ in:
                 else{
                         for(i=0;i<user::userlist.size();i++)
                             {
-                                if ( (user::userlist[i].getname()==temp) | (user::userlist[i].getemail()==temp) )
+                                if (   (  (user::userlist[i].getname()==temp) | (user::userlist[i].getemail()==temp)  )&(  (currentlyin->getemail()!=user::userlist[i].getemail())  )  )
                                 {
                                     choice++;
                                     cout<<choice<<"."<<user::userlist[i].getname()<<","<<user::userlist[i].getemail()<<endl;

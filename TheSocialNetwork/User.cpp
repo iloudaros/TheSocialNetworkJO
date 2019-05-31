@@ -68,18 +68,21 @@ user* user::setuser()//ready
      
      int check=0;
      int i;
-     
+     int* cc;
+     cc=&check;
          
     cout<<"Fantastic! Now give me your e-mail: ";
-     do{
-    cin>>email;
-         for(i=0;i!=user::userlist.size();i++)
+     do{check=0;
+         cin>>email;
+         
+         for(i=0;i<user::userlist.size();i++)
+         {
              if (userlist[i].email==email)
              {
-                 check=1;
+                 *cc=1;
                  cout<<"\n\nThe given email is already in use. -.- \n\nTry again:";
-                 break;
              }
+         }
      }while(check==1);
      
     cout<<"Great! Now I'll need you to choose a password: ";
@@ -122,21 +125,26 @@ void user::showwall()
 {
     int i;
     int x;
-    cout<< name<<endl;
+    cout<<"\n\n\t"<< name<<"\n~~*~~*~~*~~*~~*~~*~~*~~\n\n\n"<<endl;
     if(posts.size()==0) cout<<"This wall is empty\n (like my soul) :(";
     else{
-        for(i=0;i<posts.size();i++) posts[i].toString();
-        
-        if(posts[i].replies.size()!=0)
-            for(x=0;x<posts[i].replies.size();x++)
+        for(i=0;i<posts.size();i++)
         {
-            cout<<" |";
-            posts[i].replies[x].toString();
+            cout<<i+1<<". ";
+            posts[i].toString(0);
+            cout<<"\n";
+        
+            if(posts[i].replies.size()!=0)
+            {
+                for(x=0;x<posts[i].replies.size();x++)
+                    {
+                        cout<<" |";
+                        posts[i].replies[x].toString(1);
+                    }
+            }
+            cout<<"\n";
         }
-        
-        
-        
-        }
+    }
 }
 
 
@@ -155,9 +163,10 @@ void user::remfriend(int choice)//ready
 void user::showfriends()//ready
 {
     int i;
+    cout<<"\t\t\t -----Friendlist-----\n\n";
     for(i=0;i<friendlist.size();i++)
     {
-        cout<<"\t\t\t -----Friendlist-----\n\n";
+        
         cout<<i+1<<"."<<friendlist[i]->getname()<<endl;
         
         cout<<endl;
@@ -206,11 +215,11 @@ void user::like(int choice,user* currentlyin)//ready
     int i;
     int check=0;
     
-    if (currentlyin->posts[choice].likedby.size()==0) currentlyin->posts[choice-1].like(this);
+    if (currentlyin->posts[choice-1].likedby.size()==0) currentlyin->posts[choice-1].like(this);
         else
-            for (i=0;i<currentlyin->posts[choice].likedby.size();i++)
+            for (i=0;i<currentlyin->posts[choice-1].likedby.size();i++)
                     {
-                        if(currentlyin->posts[choice].likedby[i]->getemail()==this->getemail())check=1;
+                        if(currentlyin->posts[choice-1].likedby[i]->getemail()==this->getemail())check=1;
                         if(check==1)break;
                     }
     

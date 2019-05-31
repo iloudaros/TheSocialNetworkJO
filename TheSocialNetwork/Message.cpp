@@ -23,10 +23,18 @@ using namespace std;
     }
 
 
- void message::toString()
+ void message::toString(int depth)
     {
-        
-        cout<< sender->getname()<< date<< endl<<text<< endl<<"Liked by:"<<likes<<"people"<<endl;
+        int i;
+        cout<<sender->getname()<< date<<endl;
+        for (i=0; i<depth; i++) cout<<" ";
+        cout<<"-------"<< endl;
+        for (i=0; i<depth; i++) cout<<" ";
+        cout<<text<< endl;
+        for (i=0; i<depth; i++) cout<<" ";
+        cout<<"-------"<< endl;
+        for (i=0; i<depth; i++) cout<<" ";
+        cout<<"Liked by: "<<likes<<(likes>1?" people":" person")<<endl;
        
     }
     
