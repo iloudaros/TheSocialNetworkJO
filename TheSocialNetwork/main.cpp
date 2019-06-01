@@ -140,8 +140,8 @@ in: //Σε αυτό το σημείο κάποιος χρήστης είναι �
                         cout<<"Give me the post number:";
                         cin>>postnumber;
                         
-                        if(postnumber-1>currentlyin->posts.size()|postnumber-1<0)cout<<"\n\nGive me the number of a post that exists -.- \n\n";
-                    }while(postnumber-1>currentlyin->posts.size());
+                        if(postnumber-1>=currentlyin->posts.size()|postnumber-1<0)cout<<"\n\nGive me the number of a post that exists -.- \n\n";
+                    }while(postnumber-1>=currentlyin->posts.size()|postnumber-1<0);
                     currentlyin->posts[postnumber-1].reply(currentlyin);
                 }
                     
@@ -153,8 +153,8 @@ in: //Σε αυτό το σημείο κάποιος χρήστης είναι �
                         cout<<"Give me the post number:";
                         cin>>postnumber;
                         
-                        if(postnumber-1>currentlyin->posts.size()|postnumber-1<0)cout<<"\n\nGive me the number of a post that exists -.- \n\n";
-                    }while(postnumber-1>currentlyin->posts.size());
+                        if(postnumber-1>=currentlyin->posts.size()|postnumber-1<0)cout<<"\n\nGive me the number of a post that exists -.- \n\n";
+                    }while(postnumber-1>=currentlyin->posts.size()|postnumber-1<0);
                     currentlyin->like(postnumber,currentlyin);
                 }
                     break;
@@ -205,8 +205,8 @@ in: //Σε αυτό το σημείο κάποιος χρήστης είναι �
                         cout<<"Give me the post number:";
                         cin>>postnumber;
                         
-                        if(postnumber-1>currentlyin->friendlist[choice-1]->posts.size()|postnumber-1<0)cout<<"\n\nGive me the number of a post that exists -.- \n\n";
-                    }while(postnumber-1>currentlyin->friendlist[choice-1]->posts.size());
+                        if(postnumber-1>=currentlyin->friendlist[choice-1]->posts.size()|postnumber-1<0)cout<<"\n\nGive me the number of a post that exists -.- \n\n";
+                    }while(postnumber-1>=currentlyin->friendlist[choice-1]->posts.size()|postnumber-1<0);
                     currentlyin->friendlist[choice-1]->posts[postnumber-1].reply(currentlyin->friendlist[choice-1]);
                 }
                     

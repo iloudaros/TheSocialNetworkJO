@@ -219,29 +219,29 @@ void user::postto(user& A,string text)
 
 void user::like(int choice,user* currentlyin)//ready
 {
+    if (currentlyin->posts.size()<=choice-1|choice-1<0)cout<<"There is no such post -.-";
+    else{
+        int i;
+        int check=0;
     
-    int i;
-    int check=0;
-    
-    if (currentlyin->posts[choice-1].likedby.size()==0)
-    {
-        currentlyin->posts[choice-1].like(this);
-        check=1;
-    }
-        else
-            for (i=0;i<currentlyin->posts[choice-1].likedby.size();i++)
+        if (currentlyin->posts[choice-1].likedby.size()==0)
+        {
+            currentlyin->posts[choice-1].like(this);
+            check=2;
+        }
+            else
+                for (i=0;i<currentlyin->posts[choice-1].likedby.size();i++)
                     {
                         if(currentlyin->posts[choice-1].likedby[i]->getemail()==this->getemail())check=1;
                         if(check==1)break;
                     }
     
     
-    if(check==0)currentlyin->posts[choice-1].like(this);
-    else
-    {
-        cout<<"\nYou have already liked this post.\n";
-    }
+        if(check==0)currentlyin->posts[choice-1].like(this);
+        else if(check==1)cout<<"\nYou have already liked this post.\n";
+
     
+        }
 }
 
 
