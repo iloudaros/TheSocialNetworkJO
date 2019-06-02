@@ -118,6 +118,7 @@ in: //Σε αυτό το σημείο κάποιος χρήστης είναι �
     
     switch (choice) {
         case 1://Ο χρήστης βλέπει τον τοίχο του
+            do{
             currentlyin->showwall();
             int i;
             cout<<"\n\n1.Post\n\n2.Reply to a message\n\n3.Like a message\n\n4.Exit\n\n";
@@ -163,6 +164,8 @@ in: //Σε αυτό το σημείο κάποιος χρήστης είναι �
                     goto in;
                     
             }
+                
+            }while(1);
             
             break;
             
@@ -176,58 +179,61 @@ in: //Σε αυτό το σημείο κάποιος χρήστης είναι �
             
             
         case 2://Ο χρήστης βλέπει μια λίστα με τους φίλους του, μετά επιλέγει έναν από αυτούς και βλέπει τον τοίχο του
-            
+            int i;
             for(i=0;i<currentlyin->friendlist.size();i++)
                 cout<<i+1<<". "<<currentlyin->friendlist[i]->getname()<<endl;
             cout<< "Choose the number of the friend you wanna stalk(0 to go back"<<endl;
             do{
-            cin>>choice;
-            }while(choice-1>currentlyin->friendlist.size()|choice<0);
-            if (choice==0) goto in;
-            currentlyin->friendlist[choice-1]->showwall();
-            cout<<"\n\n1.Post\n\n2.Reply to a message\n\n3.Like a message\n\n4.Exit\n\n";
+                cin>>choice;
+                }while(choice-1>currentlyin->friendlist.size()|choice<0);
+                    if (choice==0) goto in;
+                        do{
+                            currentlyin->friendlist[choice-1]->showwall();
+                            cout<<"\n\n1.Post\n\n2.Reply to a message\n\n3.Like a message\n\n4.Exit\n\n";
             
-            do{cout<<"\nChoice:";
-                    cin>>i;
-                    if(i>4|i<1)cout<<"\n\nYou have to _make_ a choice, not create one\n\n";
+                            do{
+                                cout<<"\nChoice:";
+                                cin>>i;
+                                if(i>4|i<1)cout<<"\n\nYou have to _make_ a choice, not create one\n\n";
                     
-                }while(i>4|i<1);
+                                }while(i>4|i<1);
             
-            switch (i){
+                            switch (i){
                     
-                case 1://Ο χρήστης κάνει post στον τοίχο που έχει επισκεφθεί
-                    currentlyin->postto(*currentlyin->friendlist[choice-1]);
-                    break;
+                                case 1://Ο χρήστης κάνει post στον τοίχο που έχει επισκεφθεί
+                                    currentlyin->postto(*currentlyin->friendlist[choice-1]);
+                                    break;
                     
-                case 2://Ο χρήστης απαντάει σε ένα post του τοίχου που έχει επισκεφθεί
-                {   int postnumber;
-                    do{
-                        cout<<"Give me the post number:";
-                        cin>>postnumber;
+                                case 2://Ο χρήστης απαντάει σε ένα post του τοίχου που έχει επισκεφθεί
+                                {   int postnumber;
+                                    do{
+                                        cout<<"Give me the post number:";
+                                        cin>>postnumber;
                         
-                        if(postnumber-1>=currentlyin->friendlist[choice-1]->posts.size()|postnumber-1<0)cout<<"\n\nGive me the number of a post that exists -.- \n\n";
-                    }while(postnumber-1>=currentlyin->friendlist[choice-1]->posts.size()|postnumber-1<0);
-                    currentlyin->friendlist[choice-1]->posts[postnumber-1].reply(currentlyin->friendlist[choice-1]);
-                }
+                                        if(postnumber-1>=currentlyin->friendlist[choice-1]->posts.size()|postnumber-1<0)cout<<"\n\nGive me the number of a post that exists -.- \n\n";
+                                        }while(postnumber-1>=currentlyin->friendlist[choice-1]->posts.size()|postnumber-1<0);
+                                    currentlyin->friendlist[choice-1]->posts[postnumber-1].reply(currentlyin->friendlist[choice-1]);
+                                }
                     
-                    break;
+                                    break;
                     
-                case 3://Ο χρήστης κάνει like σε ένα post του τοίχου που έχει επισκεφθεί
-                {  int postnumber;
-                    do{
-                        cout<<"Give me the post number:";
-                        cin>>postnumber;
+                                case 3://Ο χρήστης κάνει like σε ένα post του τοίχου που έχει επισκεφθεί
+                                {  int postnumber;
+                                    do{
+                                        cout<<"Give me the post number:";
+                                        cin>>postnumber;
                         
-                        if(postnumber-1>currentlyin->friendlist[choice-1]->posts.size()|postnumber-1<0)cout<<"\n\nGive me the number of a post that exists -.- \n\n";
-                    }while(postnumber-1>currentlyin->friendlist[choice-1]->posts.size());
-                    currentlyin->like(postnumber-1,currentlyin->friendlist[choice-1]);
-                }
-                    break;
+                                        if(postnumber-1>currentlyin->friendlist[choice-1]->posts.size()|postnumber-1<0)cout<<"\n\nGive me the number of a post that exists -.- \n\n";
+                                    }while(postnumber-1>currentlyin->friendlist[choice-1]->posts.size());
+                                    currentlyin->like(postnumber-1,currentlyin->friendlist[choice-1]);
+                                }
+                                    break;
                     
-                case 4://Βγαίνει από τον τοίχο που έχει επισκεφθεί
-                    goto in;
-                    
-            }
+                                case 4://Βγαίνει από τον τοίχο που έχει επισκεφθεί
+                                    goto in;
+                                    }
+                        }while(1);
+                        
                 
             break;
             
