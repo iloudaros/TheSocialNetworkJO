@@ -21,7 +21,7 @@ class friendRequest//ready
  public:
     void statuschange();//ready
     
-    void statuscheck();//eady
+    void statuscheck();//ready
     
     friendRequest(user&,user&);//ready
     

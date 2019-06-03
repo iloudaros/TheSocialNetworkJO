@@ -18,7 +18,6 @@ class message
     std::string text;
     user* sender;
     user* receiver;
-    std::string response;
     int likes=0;
     
     
