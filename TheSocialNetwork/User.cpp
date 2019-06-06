@@ -258,6 +258,9 @@ void user::showrequests()
         cout<<choice<<". "<<reqrec[i].getsender()->getname()<<","<<reqrec[i].getsender()->getemail()<<" "<<reqrec[i].gettime();
         results.push_back(&reqrec[i]);
     }
+    
+    if (results.size()==0)cout<<"\n\nNo requests to examine\n\n";
+    else{
     cout<<"\nWhich request do you wanna examine?(Choose 0 to exit)\n";
     cin>>i;
     if(i==0);
@@ -270,6 +273,7 @@ void user::showrequests()
             if (choice==1) this->accept(i);
             else this->reject(i);
             
-        }
+            }
     
+        }
 }
